@@ -1,181 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rifat Hossan – Entrepreneur | Content Creator | National Debater</title>
-  <style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; scroll-behavior: smooth; }
-    body { line-height: 1.6; background-color: #fefefe; color: #222; }
-    a { text-decoration: none; color: inherit; }
-    button { cursor: pointer; }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Fozle Rabbi, portfolio, Rabbi, full stack dev, personal portfolio scriptysphere, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Rabbi's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <title>Portfolio | Fozle Rabbi</title>
+    <meta name="google-site-verification" content="E8mLOdY5uxKonPEFPAl5gxBX2lmZNh7vUCQ4If-8Z9c" />
 
-    /* Navbar */
-    nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); display: flex; justify-content: center; gap: 30px; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
-    nav a { color: #2575fc; font-weight: bold; transition: 0.3s; }
-    nav a:hover { color: #6a11cb; }
 
-    /* Hero */
-    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: linear-gradient(to right, #6a11cb, #2575fc); color: #fff; padding: 0 20px; }
-    .hero img { width: 180px; height: 180px; border-radius: 50%; margin-bottom: 20px; border: 4px solid #fff; object-fit: cover; animation: fadeIn 1s ease forwards; opacity: 0; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; animation: slideUp 1s 0.5s forwards; opacity: 0; }
-    .hero p { font-size: 1.2rem; margin-bottom: 20px; animation: slideUp 1s 0.8s forwards; opacity: 0; }
-    .hero .btn-group button { margin: 5px; padding: 10px 20px; border: none; border-radius: 25px; font-weight: bold; transition: 0.3s; }
-    .btn-facebook { background: #3b5998; color: #fff; }
-    .btn-youtube { background: #ff0000; color: #fff; }
-    .btn-facebook:hover { background: #2d4373; }
-    .btn-youtube:hover { background: #cc0000; }
 
-    /* Section */
-    section { padding: 80px 20px; opacity: 0; transform: translateY(40px); transition: all 1s ease; }
-    section.visible { opacity: 1; transform: translateY(0); }
-    h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: #333; }
-    p { max-width: 800px; margin: 0 auto 20px; text-align: center; font-size: 1rem; color: #555; }
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Fozle Rabbi",
+  "alternateName": "Rabbi",
+  "jobTitle": "Full-Stack Developer | Runner | Volunteer",
+  "url": "https://fozlerabbi.dev",
+  "image": "https://fozlerabbi.dev/assets/images/Profile2.jpg",
+  "sameAs": [
+    "https://www.facebook.com/fozlerabbi.dev",
+    "https://www.linkedin.com/in/fozlerabbit",
+    "https://github.com/fozlerabbit",
+    "https://x.com/rabbi_foyez"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "ScriptySphere",
+    "url": "https://scriptysphere.org"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Nasirabad College Mymensingh"
+  },
+  "description": "Fozle Rabbi is a Full-Stack Developer from Bangladesh with expertise in MERN Stack. He is a passionate marathon runner and an active volunteer in social initiatives."
+}
+</script>
 
-    /* Roles & Projects */
-    .roles, .projects { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .role-card, .project-card { background: #fff; border-radius: 10px; padding: 20px; width: 250px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; opacity: 0; transform: translateY(20px); }
-    .role-card.visible, .project-card.visible { opacity: 1; transform: translateY(0); transition: all 0.6s ease; }
-    .role-card:hover, .project-card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
-    .project-card span { font-size: 2rem; display: block; margin-bottom: 10px; }
 
-    /* Social Links */
-    .socials { display: flex; justify-content: center; gap: 30px; font-size: 1.2rem; flex-wrap: wrap; }
-    .socials a { color: #2575fc; transition: 0.3s; }
-    .socials a:hover { color: #6a11cb; }
 
-    /* Contact Form */
-    .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
-    .contact-form input, .contact-form textarea { padding: 12px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; }
-    .contact-form button { padding: 12px; border: none; border-radius: 25px; background: #2575fc; color: #fff; font-size: 1rem; font-weight: bold; transition: 0.3s; }
-    .contact-form button:hover { background: #6a11cb; }
-
-    /* Footer */
-    footer { background: #222; color: #fff; text-align: center; padding: 20px 0; font-size: 0.9rem; }
-    footer a { color: #fff; text-decoration: none; font-weight: bold; }
-
-    /* Animations */
-    @keyframes fadeIn { to { opacity: 1; } }
-    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .roles, .projects { flex-direction: column; align-items: center; }
-      nav { flex-direction: column; gap: 15px; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-    }
-  </style>
+    
 </head>
-<body>
+<body oncontextmenu="return false">
 
-  <!-- Navbar -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#roles">Roles</a>
-    <a href="#projects">Projects</a>
-    <a href="#social">Social</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="images.jpg" alt="Rifat Hossan">
-    <h1>Rifat Hossan</h1>
-    <p>Entrepreneur | Content Creator | National Debater</p>
-    <div class="btn-group">
-      <button class="btn-facebook" onclick="window.open('https://www.facebook.com/rifathossankothaprio','_blank')">Follow on Facebook</button>
-      <button class="btn-youtube" onclick="window.open('https://www.youtube.com/@RealityWithRifat','_blank')">Watch on YouTube</button>
-    </div>
-  </section>
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> Rabbi</a>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About</h2>
-      <p>Rifat Hossan is a dynamic digital creator and youth leader, widely recognised for his impactful presence in debating, entrepreneurship, and creative storytelling. He is the Founder of BanglaVerse With Rifat and Reality With Rifat, with 18,000+ followers across platforms.</p>
-    </div>
-  </section>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
 
-  <!-- Roles & Work -->
-  <section id="roles">
-    <div class="container">
-      <h2>Roles & Work</h2>
-      <div class="roles">
-        <div class="role-card">Director – BanglaVerse With Rifat</div>
-        <div class="role-card">Head of Management – DMC Dreamers</div>
-        <div class="role-card">Owner – Reality With Rifat</div>
-        <div class="role-card">National Debater – NDF BD</div>
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <br>
+        
+    <h2>Hi There,<br/> I'm Fozle <span>Rabbi</span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/fozlerabbit/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/fozlerabbit" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter" href="https://x.com/rabbi_foyez" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="https://t.me/fozlerabbi" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/fozlerabbit"><i class="fab fa-instagram" target="_blank"></i></a></li>
+          <li><a class="dev" aria-label="Dev" href="https://dev.to/fozlerabbi" target="_blank"><i class="fab fa-dev"></i></a></li>
+        </ul>
       </div>
     </div>
-  </section>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/Profile2.jpg" alt="">
+</div>
+</section>
+<!-- hero section ends -->
 
-  <!-- Projects & Media -->
-  <section id="projects">
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/Profile2.jpg" alt="Fozle Rabbi">
+    </div>
+    <div class="content">
+        <h3>I'm Rabbi</h3>
+        <span class="tag">Full Stack Developer | Volunteer | Runner</span>
+        
+<p>I'm a <b>Full-Stack Developer</b> from <b>Dhaka, Bangladesh</b>, passionate about building dynamic web applications using the <b>MERN Stack</b>. As the <b>Member of ScriptySphere</b>, I’m always exploring new technologies and pushing my limits in development.</p>  
+        
+<h1>🏃‍♂️ <b>Marathon Runner</b></h1>  
+<p>With <b>50+ medals</b> in marathons, I love pushing my physical and mental endurance. Running is my way of challenging limits and staying disciplined.</p>  
+
+<h1>🤝 <b>Volunteer & Changemaker</b></h1>  
+<p>Actively working with <b>Volunteer for Bangladesh</b> and <b>Rapid Response BD</b> to create a positive impact in society. I believe in giving back and making a difference.</p>  
+
+<h1>💡 <b>Tech Enthusiast & Innovator</b></h1>  
+<p>Participated in competitions like <b>NASA Space Apps Challenge</b> and <b>International Robo Tech Olympiad</b>. I love solving complex problems and working on innovative projects.</p>  
+
+<h1>🎓 <b>Continuous Learner</b></h1>  
+<p>Completed <b>100+ courses</b> from platforms like <b>WHO</b> and <b>Bangladesh Online Journalism School</b>. Always upgrading my skills and knowledge.</p>  
+
+<h1>♟️ <b>Chess Player & Strategic Thinker</b></h1>  
+<p>Chess isn’t just a game for me—it’s a way to sharpen my mind and think ahead in every aspect of life.</p>  
+
+<h1>⚡ <b>Fitness Enthusiast</b></h1>  
+<p>Dedicated to working out, building strength, and maintaining a <b>V-shape physique</b>. Fitness fuels my energy and keeps me at my best.</p>  
+
+<p><b>Always learning, always building, always growing! Let’s connect and create something amazing. 🚀</b></p>  
+</ul>  
+
+
+
+        
+        
+        <div class="box-container">
+            <div class="box">
+              <p><span> age: </span> 18+</p>
+              <p><span> phone : </span> +8801884541714</p>
+            </div>
+            <div class="box">
+              <p><span> email : </span> infiniterabbiex@gmail.com</p>
+              <p><span> place : </span> Dhaka, Bangladesh</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="https://fozlerabbi.dev/cv" target="_blank" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
     <div class="container">
-      <h2>Projects & Media</h2>
-      <div class="projects">
-        <div class="project-card"><span>🎬</span>Reality With Rifat – YouTube channel</div>
-        <div class="project-card"><span>🌐</span>BanglaVerse With Rifat – Creative initiative</div>
-        <div class="project-card"><span>📢</span>DMC Dreamers – Youth platform</div>
+          <div class="row" id="skillsContainer">
+
+            <!-- <div class="bar">
+              <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
+                <span>AdobeXD</span>
+              </div>
+            </div> -->
+
+      </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="./assets/images/educat/college.jpg" alt="">
+        </div>
+        <div class="content">
+        <h3>HSC | Science</h3>
+        <p> Nasirabad College Mymensingh | NCM</p>
+        <h4>2022-2024 | Completed</h4>
+        </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="./assets/images/educat/school.jpg" alt="">
+      </div>
+      <div class="content">
+      <h3>SSC | Science</h3>
+      <p>Ahammadabad High School</p>
+      <h4>2017-2022 | Completed</h4>
       </div>
     </div>
-  </section>
 
-  <!-- Social Links -->
-  <section id="social">
-    <div class="container">
-      <h2>Connect</h2>
-      <div class="socials">
-        <a href="https://www.youtube.com/@RealityWithRifat" target="_blank">YouTube: @RealityWithRifat</a>
-        <a href="https://www.facebook.com/rifathossankothaprio" target="_blank">Facebook: @rifathossankothaprio</a>
+</div>
+</section>
+<!-- education section ends -->
+
+
+<!-- work project section starts -->
+<section class="work" id="work">
+
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+  <div class="box-container">
+
+    <!-- <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/portfolio1.PNG" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>Portfolio Website</h3>
+        </div>
+        <div class="desc">
+          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
+          <div class="btns">
+            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/foyezrabbi/Portfolio-Website" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+</div>
+
+<div class="viewall">
+  <a href="#projects" class="btn"><span>View All</span>
+    <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+</section>
+<!-- work project section ends -->
+
+<!-- experience section starts -->
+<section class="experience" id="experience">
+
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+
+  <div class="timeline">
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>ScriptySphere</h2>
+        </div>
+        <div class="desc">
+            <h3>Full Stack Developer</h3>
+            <p>Oct 2019 - present</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <form class="contact-form" onsubmit="submitForm(event)">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Volunteer for Bangladesh (VBD)</h2>
+        </div>
+        <div class="desc">
+            <h3>General Member | HRO Member</h3>
+            <p>2023 - Present</p>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Rifat Hossan. All rights reserved. <br>
-    Made with ❤️ by <a href="https://www.facebook.com/fozlerabbi.dev" target="_blank">Fozle Rabbi</a>
-  </footer>
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Bangladesh Scout</h2>
+        </div>
+        <div class="desc">
+            <h3>Rover | ARM</h3>
+            <p>Jan 2017 - Present</p>
+        </div>
+      </div>
+    </div>
 
-  <script>
-    // Contact form
-    function submitForm(e) {
-      e.preventDefault();
-      alert("Thank you for reaching out! We'll get back to you soon.");
-      e.target.reset();
-    }
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Swapna Bunon Foundation Bangladesh</h2>
+        </div>
+        <div class="desc">
+            <h3>Teacher | Internship</h3>
+            <p>April 2023 - Present</p>
+        </div>
+      </div>
+    </div>
 
-    // Scroll animations
-    const sections = document.querySelectorAll('section');
-    const cards = document.querySelectorAll('.role-card, .project-card');
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Prothom Alo Bondhushava</h2>
+        </div>
+        <div class="desc">
+            <h3>Notun Bondhu</h3>
+            <p>April 2023 - Present</p>
+        </div>
+      </div>
+    </div>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Rapid Response Bangladesh | Animal Rescue Bangladesh</h2>
+        </div>
+        <div class="desc">
+            <h3>Former Co-Director</h3>
+            <p>March 2024 - April 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    sections.forEach(sec => observer.observe(sec));
-    cards.forEach(card => observer.observe(card));
-  </script>
+  <div class="morebtn">
+    <a href="/experience" class="btn"><span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+  </a>
+  </div>
+
+</div>
+
+</section>
+<!-- experience section ends -->
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+  
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="">
+      </div>
+    <form id="contact-form">
+      
+      <div class="form-group">
+        <div class="field">
+          <input type="text" name="name" placeholder="Name" required>
+          <i class='fas fa-user'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="email" placeholder="Email" required>
+          <i class='fas fa-envelope'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="phone" placeholder="Phone">
+          <i class='fas fa-phone-alt'></i>
+        </div>
+        <div class="message">
+        <textarea placeholder="Message" name="message" required></textarea>
+        <i class="fas fa-comment-dots"></i>
+        </div>
+        </div>
+      <div class="button-area">
+        <button type="submit">
+          Submit <i class="fa fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+  </div>
+</section>
+<!-- contact section ends -->
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Rabbi's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+8801884541714</p>
+          <p> <i class="fas fa-envelope"></i>infiniterabbiex@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Dhaka, Bangladesh </p>
+          <div class="share">
+
+            <a href="https://www.linkedin.com/in/fozlerabbit" class="fab fa-linkedin" target="_blank"></a>
+            <a href="https://github.com/fozlerabbit" class="fab fa-github" target="_blank"></a>
+            <a href="mailto:infiniterabbiex@gmail.com" class="fas fa-envelope" target="_blank"></a>
+            <a href="https://fozlerabbi.dev/cv" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://t.me/fozlerabbi" class="fab fa-telegram-plane" target="_blank"></a>
+            <a class="instagram" aria-label="Instagram" href="https://www.instagram.com/fozlerabbit"><i class="fab fa-instagram" target="_blank"></i></a>
+            <a class="dev" aria-label="Dev" href="https://dev.to/fozlerabbi" target="_blank"><i class="fab fa-dev"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/fozlerabbit"> Fozle Rabbi</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
 
 </body>
 </html>
