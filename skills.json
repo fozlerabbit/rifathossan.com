@@ -1,26 +1,41 @@
 [
     {
-        "name": "Animal Nutrition",
+        "name": "MS WORD",
         "icon": "https://img.icons8.com/color/48/000000/redux.png"
     },
     {
-        "name": "Meat Science",
+        "name": "MS EXCEL",
         "icon": "https://img.icons8.com/color/48/000000/redux.png"
     },
     {
-        "name": "Livestock Economics",
+        "name": "GEMINI",
         "icon": "https://img.icons8.com/color/48/000000/redux.png"
     },
     {
-        "name": "Critical Thinking",
+        "name": "CHATGPT",
         "icon": "https://img.icons8.com/color/48/000000/redux.png"
     },
     {
-        "name": "Lead Generation",
+        "name": "CAPCUT PRO",
+        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+    },
+    
+    {
+        "name": "DOC / SHEETS",
         "icon": "https://img.icons8.com/color/48/000000/redux.png"
     },
     {
-        "name": "Microsoft Office",
+        "name": "CANVA",
+        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+    },
+    
+    {
+        "name": "MS POWER POINT",
+        "icon": "https://img.icons8.com/color/48/000000/redux.png"
+    },
+    
+    {
+        "name": "ADOBE PREMIER PRO",
         "icon": "https://img.icons8.com/color/48/000000/redux.png"
     }
    
