@@ -2,7 +2,7 @@
   {
     "desc": "ADMC Dreamers",
     "name": "Head Of Management",
-    "image": "./p/1.jpeg",
+    "image": "1",
     "category": "mern",
     "links": {
       "view": "xyz",
@@ -12,7 +12,7 @@
   {
     "desc": "BanglaVerse With Rifat",
     "name": "Founder & Teacher",
-    "image": "../p/2.jpeg",
+    "image": "2",
     "category": "mern",
     "links": {
       "view": "xyz",
@@ -22,7 +22,7 @@
   {
     "desc": "Evaluation of Agricultural Policies and Its Impact on Agricultural Development in Bangladesh ",
     "name": "PReality with Rifat - Founder & Host",
-    "image": "/p/3.jpeg",
+    "image": "3",
     "category": "mern",
     "links": {
       "view": "xyz",
@@ -32,7 +32,7 @@
   {
     "desc": "Evaluation of Diesel and Electric Operated Shallow Tubewell Irrigation Modes in Some Selected Areas of Mymensingh Division",
     "name": "Blu Fashion - Manager",
-    "image": "/p/4.jpeg",
+    "image": "4,
     "category": "mern",
     "links": {
       "view": "xyz",
@@ -42,7 +42,7 @@
   {
     "desc": "Changes in Women Economic Empowerment and Its Impact on Household Livelihood: A Socio-economic Study of Harijan Community in Cumilla District ",
     "name": "Shutter House Films - Production Manager",
-    "image": "/p/5.jpeg",
+    "image": "5",
     "category": "lamp",
     "links": {
       "view": "xyz",
@@ -52,7 +52,7 @@
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "International Academy of Film and Media - Content Writer ",
-    "image": "/p/6.jpeg",
+    "image": "6",
     "category": "basicweb",
     "links": {
       "view": "xyz",
@@ -62,7 +62,7 @@
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "Labib Group - Operator",
-    "image": "/p/7.jpeg",
+    "image": "7",
     "category": "basicweb",
     "links": {
       "view": "xyz",
@@ -72,7 +72,7 @@
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "SMC - Lab Operator",
-    "image": "/p/8.jpeg",
+    "image": "8",
     "category": "basicweb",
     "links": {
       "view": "xyz",
@@ -82,7 +82,7 @@
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "Photography Agency - Manager",
-    "image": "/p/9.jpeg",
+    "image": "9",
     "category": "basicweb",
     "links": {
       "view": "xyz",
@@ -92,7 +92,7 @@
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "FRS - Public Relation Officer ",
-    "image": "/p/10.jpeg",
+    "image": "10",
     "category": "basicweb",
     "links": {
       "view": "xyz",
@@ -102,7 +102,7 @@
     {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "FRS - Public Relation Officer ",
-    "image": "/p/11.jpeg",
+    "image": "11",
     "category": "basicweb",
     "links": {
       "view": "xyz",
@@ -112,7 +112,7 @@
     {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "FRS - Public Relation Officer ",
-    "image": "/p/12.jpeg",
+    "image": "12",
     "category": "basicweb",
     "links": {
       "view": "xyz",
