@@ -57,8 +57,8 @@
     "links": {
       "view": "xyz",
       "code": "xyz"
-    },
-  }
+    }
+  },
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "Labib Group - Operator",
@@ -67,8 +67,8 @@
     "links": {
       "view": "xyz",
       "code": "xyz"
-    },
-  } 
+    }
+  },
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "SMC - Lab Operator",
@@ -77,8 +77,8 @@
     "links": {
       "view": "xyz",
       "code": "xyz"
-    },
-  } 
+    }
+  },
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "Photography Agency - Manager",
@@ -87,12 +87,32 @@
     "links": {
       "view": "xyz",
       "code": "xyz"
-    },
-  } 
+    }
+  }, 
   {
     "desc": "Empowerment of Rural Women through Livestock Initiatives",
     "name": "FRS - Public Relation Officer ",
     "image": "/assets/images/projects/10.jpeg",
+    "category": "basicweb",
+    "links": {
+      "view": "xyz",
+      "code": "xyz"
+    }
+  },
+    {
+    "desc": "Empowerment of Rural Women through Livestock Initiatives",
+    "name": "FRS - Public Relation Officer ",
+    "image": "/assets/images/projects/11.jpeg",
+    "category": "basicweb",
+    "links": {
+      "view": "xyz",
+      "code": "xyz"
+    }
+  },
+    {
+    "desc": "Empowerment of Rural Women through Livestock Initiatives",
+    "name": "FRS - Public Relation Officer ",
+    "image": "/assets/images/projects/12.jpeg",
     "category": "basicweb",
     "links": {
       "view": "xyz",
